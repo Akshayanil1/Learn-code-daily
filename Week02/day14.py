@@ -12,14 +12,13 @@ def calculate_sum(scores):
 def find_top_student(student_list):
     top_student = None
     highest_score = 0
-    
     for student in student_list:
         total_score = sum(student["scores"])
         if total_score > highest_score:
             highest_score = total_score
             top_student = student
-            
     return top_student
+
 
 # def find_top_student(student_list):
 #     if not student_list:

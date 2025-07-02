@@ -1,3 +1,4 @@
+
 # try:
 #     age = int(input("Enter your age: "))
 #     print(f"Next year, you will be {age + 1} years old.")
@@ -7,6 +8,7 @@
 #     print(f"You entered {age}")
 # finally:
 #     print("Thank you for using the age callculator.")
+
 while True:
     try:
         num1 = int(input("Enter the first number: "))

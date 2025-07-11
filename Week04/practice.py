@@ -43,17 +43,15 @@
 # # This program will ask you some question, based on your answers it will suggest what can you
 # while True:
 #     age = int(input("Enter your age: "))
-#     if age >= 25 and age != 150:
+#     if age >= 25:
 #         print("You are old enough to rent a car in India.")
 #         print("You are old enough to drink in India.")
 #         print("You are eligible to vote.")
-#     elif age >= 21 and age != 150:
+#     elif age >= 21:
 #         print("You are old enough to drink in India.")
 #         print("You are eligible to vote.")
-#     elif age >= 18 and age != 150:
+#     elif age >= 18:
 #         print("You are eligible to vote.")
-#     elif age >= 150:
-#         print("Invalid input try again")
 #     else:
 #         print("You are too young, focus on your studies and enjoy your youth!")
 #     break
@@ -131,44 +129,95 @@
 #             print("invalid input, try again")
 # play_guess()
 
-# Module 4
-my_profile = {
-    "name" : "abc",
-    "age" : 29,
-    "current_job" : "bpo",
-    "target_job" : "developer"
-}
-print(my_profile["name"])
-print(my_profile)
+# # Module 4
+# my_profile = {
+#     "name" : "abc",
+#     "age" : 29,
+#     "current_job" : "bpo",
+#     "target_job" : "developer"
+# }
+# print(my_profile["name"])
+# print(my_profile)
 
-# updated my_profile
-my_profile["skills"] = ["python", "problem solving"]
-my_profile["current_job"] = ["junior developer"]
-del my_profile ["target_job"]
-print(my_profile) 
+# # updated my_profile
+# my_profile["skills"] = ["python", "problem solving"]
+# my_profile["current_job"] = "junior developer"
+# del my_profile ["target_job"]
+# print(my_profile) 
 
-# looping through key, value using for:
-for key, value in my_profile.items():
-    print(key, value)
+# # looping through key, value using for:
+# for key, value in my_profile.items():
+#     print(key, value)
 
-# to the final challenge a contact book, integrating functions, using dictionary and list
-contact_book = []
+# # to the final challenge a contact book, integrating functions, using dictionary and list
+# contact_book = []
 
-def add_contacts(name, phone, email):
-    contact_book.append ({
-    "name" : name,
-    "phone" : phone,
-    "email" : email
-    })
-def display_contact():
-    if not contact_book:
-        print("no contact found")
-    else:
-        for contact in contact_book:
-            print(f"Name: {contact["name"]}, Phone: {contact["phone"]}, Email: {contact["email"]}")
+# def add_contacts(name, phone, email):
+#     contact_book.append ({
+#     "name" : name,
+#     "phone" : phone,
+#     "email" : email
+#     })
+# def display_contact():
+#     if not contact_book:
+#         print("no contact found")
+#     else:
+#         for contact in contact_book:
+#             print(f"Name: {contact["name"]}, Phone: {contact["phone"]}, Email: {contact["email"]}")
 
-name = input("Enter your name: ")
-phone = input("Enter your phone: ")
-email = input("Enter your email: ")
-add_contacts(name, phone, email)
-display_contact()
+# name = input("Enter your name: ")
+# phone = input("Enter your phone: ")
+# email = input("Enter your email: ")
+# add_contacts(name, phone, email)
+# display_contact()
+
+# # Module 5
+# # Contact Book
+# FILENAME = "CONTACT.txt"
+
+# def load_contacts():
+#     contact_book = []
+#     try:
+#         with open(FILENAME, "r") as file:
+#             for line in file:
+#                 if line.strip():
+#                     name, phone, email = line.strip().split(",")
+#                     contact_book.append({"name": name.strip(), "phone": phone.strip(), "email": email})
+#     except FileNotFoundError:
+#         pass
+#     return contact_book
+# def save_contacts(name, phone, email):
+#     with open (FILENAME, "a") as file:
+#         file.write(f"{name},{phone},{email}\n")
+# def display_contacts(contact_list):
+#     print("\n--- Your contacts ---")
+#     if not contact_list:
+#         print("Your contact book is empty")
+#     else:
+#         for i, contact in enumerate(contact_list):
+#             print(f"{i+1}. Name: {contact["name"]}, Phone: {contact["phone"]}, Email: {contact["email"]}")
+    
+# def run_program():
+#     my_contacts = load_contacts()
+#     while True:
+#         print("\n--- Contact Manager ---")
+#         print("1. View Contacts")
+#         print("2. Add Contacts")
+#         print("3. Exit")
+#         choice = input("Enter your choice: ")
+#         if choice == "1":
+#             display_contacts(my_contacts)
+#         elif choice == "2":
+#             name = input("Enter contact name: ")
+#             phone = input("Enter contact phone: ")
+#             email = input("Enter contact email: ")
+#             new_contact = {"name": name, "phone": phone, "email": email}
+#             my_contacts.append(new_contact)
+#             save_contacts(name, phone, email)
+#             print(f"{name} has been added.")
+#         elif choice == "3":
+#             print("Goodbye!!")
+#             break
+#         else:
+#             print("Invalid choice, please try again.")
+# run_program()

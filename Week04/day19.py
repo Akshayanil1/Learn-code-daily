@@ -106,7 +106,7 @@ print(my_profile["name"])
 
 my_profile["skills"] = ["Python", "Problem Solving"]
 my_profile["current_job"] = "Junior Developer"
-del my_profile["target_job"]
+del my_profile["target_job"]    
 print(my_profile)
 
 # Task 3: Looping Through a Dictionary
@@ -119,11 +119,7 @@ for key,value in my_profile.items():
 contact_book = []
 
 def add_contact(name, phone, email):
-    contact_book.append ({
-        "name" : name,
-        "phone" : phone,
-        "email" : email
-    })
+    contact_book.append ({"name" : name, "phone" : phone, "email" : email})
 def display_contacts():
     if not contact_book:
         print("No contact found")
